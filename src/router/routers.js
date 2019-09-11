@@ -486,5 +486,24 @@ export default [
       hideInMenu: true
     },
     component: () => import('@/view/error-page/404.vue')
+  },
+  {
+    path: '/',
+    name: 'test',
+    meta: {
+      hideInBread: true
+    },
+    component: Main,
+    children: [
+      {
+        path: 'test_page',
+        name: 'test_page',
+        meta: {
+          icon: 'ios-navigate',
+          title: '指令'
+        },
+        component: () => import('@/view/test/test.vue')
+      }
+    ]
   }
 ]
